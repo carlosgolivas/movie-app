@@ -1,5 +1,3 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-import '../styles/app.scss';
 import Header from '../components/Header';
 import { Inter } from 'next/font/google';
 
