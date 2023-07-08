@@ -1,12 +1,13 @@
 import Link from 'next/link';
+import Image from 'next/Image';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 
 const Header: React.FC = () => {
   return (
-    <header className='flex items-center justify-between px-5 py-6 bg-darkblue text-white'>
+    <header className='flex items-center justify-between px-5 py-6 bg-darkblue text-white overflow-hidden'>
       <div className='flex'>
         <Link href='/' className='mx-4'>
-          <img src='/tmdb-logo.png' alt='Logo' className='h-6' />
+          <Image src='/tmdb-logo.png' alt='Logo' width={200} height={200} />
         </Link>
         <nav className='flex items-center ml-5 font-semibold'>
           <Link href='#' className='mx-4'>
