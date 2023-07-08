@@ -1,12 +1,24 @@
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import '../styles/app.scss';
 import Header from '../components/Header';
+import { Inter } from 'next/font/google';
 
-const MainLayout: React.FC = ({ children }) => {
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata = {
+  title: 'TMDB'
+};
+
+type Props = {
+  children: React.ReactNode;
+};
+
+const MainLayout: React.FC<Props> = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div>
+    <>
       <Header />
       <main>{children}</main>
-    </div>
+    </>
   );
 };
 
